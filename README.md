@@ -1,7 +1,3 @@
-Here’s a clean and professional README.md for your RDPGenie project:
-
-⸻
-
 # RDPGenie
 
 **RDPGenie** is a lightweight Streamlit web app that converts PAM-generated `.sh` session files (which contain `rdesktop` commands) into compatible `.rdp` configuration files for use with **Microsoft Remote Desktop** on macOS.
@@ -32,33 +28,43 @@ In some organizations, remote desktop sessions are delivered through auto-genera
 ```bash
 git clone https://github.com/your-username/RDPGenie.git
 cd RDPGenie
+```
 
-2. Create a virtual environment
+### 2. Create a virtual environment
 
+```bash
 python -m venv venv
 source venv/bin/activate  # On Windows: venv\Scripts\activate
+```
 
-3. Install dependencies
+### 3. Install dependencies
 
+```bash
 pip install -r requirements.txt
+```
 
-4. Run the app
+### 4. Run the app
 
+```bash
 streamlit run app.py
+```
 
-Then open http://localhost:8501 in your browser.
+Then open `http://localhost:8501` in your browser.
 
-⸻
+---
 
-📄 Example Input
+## 📄 Example Input
 
-A typical .sh file might contain:
+A typical `.sh` file might contain:
 
+```sh
 #!/bin/sh
 rdesktop -u 'john.doe@domain:RDP_1:Project_Session:john.doe' '10.0.0.5:3389' -N -f -a 32 -x 0x80 -r clipboard:CLIPBOARD
+```
 
-RDPGenie will convert this to:
+**RDPGenie** will convert this to:
 
+```ini
 full address:s:10.0.0.5:3389
 username:s:john.doe@domain:RDP_1:Project_Session:john.doe
 prompt for credentials:i:1
@@ -68,34 +74,28 @@ screen mode id:i:2
 desktopwidth:i:1920
 desktopheight:i:1080
 session bpp:i:32
+```
 
+---
 
+## 📦 Folder Structure
 
-⸻
-
-📦 Folder Structure
-
+```
 RDPGenie/
 ├── app.py
 ├── requirements.txt
 └── README.md
-
-
-
-⸻
-
-🪄 Credit
-
-Built with ❤️ by Maitham Jasim
-Feel free to use, modify, or contribute.
-
-⸻
-
-📘 License
-
-This project is open-source and available under the MIT License.
+```
 
 ---
 
-Let me know if you want a logo/banner or if you’ve hosted it and want to add a deployment section.
-```
+## 🪄 Credit
+
+Built with ❤️ by Maitham Jasim  
+Feel free to use, modify, or contribute.
+
+---
+
+## 📘 License
+
+This project is open-source and available under the MIT License.
