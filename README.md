@@ -26,7 +26,7 @@ In some organizations, remote desktop sessions are delivered through auto-genera
 ### 1. Clone the repo
 
 ```bash
-git clone https://github.com/your-username/RDPGenie.git
+git clone https://github.com/iMythms/RDPGenie.git
 cd RDPGenie
 ```
 
